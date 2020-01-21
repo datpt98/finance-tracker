@@ -1,24 +1,15 @@
 # README
+URL: http://alpha-blog12.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+A Finance Tracker application that is built on Ruby on Rails, Devise and Bootstrap. Features include:
 
-* Ruby version
+* User signup and authentication
 
-* System dependencies
+* Edit profile
 
-* Configuration
+* Adding, removing stocks from API database
 
-* Database creation
+* Follow and unfriend other users
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* View others' stocks
