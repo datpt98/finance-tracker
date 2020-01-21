@@ -1,0 +1,31 @@
+<div class="jumbotron stocks">
+  <div class="content">
+    <h1>User Details</h1>
+    <hr/>
+    <table class="table table-borderless table-sm table-striped">
+      <tbody>
+        <tr>
+          <td><strong>Name: </strong> <%= @user.full_name %></td>
+          <td><strong>Email: </strong> <%= @user.email %></td>
+          <td>
+            <% if current_user.not_friends_with?(@user.id) %>
+              <%= link_to 'Follow friend', friendships_path(friend: @user),
+                            class: "btn btn-sm button", method: :post %>
+            <% else %>
+              <span class="badge badge-secondary">
+                You are friends
+              </span>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr/>
+    <% if !@tracked_stocks.empty? %>
+      <%= render 'stocks/list'%>
+    <% else %>
+      <p class='lead'>This user is not tracking any stocks</p>
+    <% end %>
+    <%= link_to 'Back', my_friends_path, class: "btn btn-xs button" %>
+  </div>
+</div>

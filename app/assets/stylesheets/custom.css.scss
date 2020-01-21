@@ -1,19 +1,73 @@
 @import 'bootstrap/dist/css/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Signika|Yanone+Kaffeesatz&display=swap');
 
-.search-area {
-	padding-top: 15px;
+body {
+	background-color: #FFBE2E;
+	font-family: 'Josefin Sans', sans-serif;
+	letter-spacing: 0px;
 }
 
-.no-right-padding {
-	padding-right: 0 !important;
+.jumbotron {
+	background-color: #FFBE2E;
+	border: 1.5px solid black;
+	box-shadow: inset 0px 0px 5px 3px rgba(255,255,255,0.6);
 }
 
-
-.no-left-padding {
-	padding-left: 0 !important;
+.img {
+	background-image: asset-url('bg.jpg');
+	background-size: cover;
 }
 
-.results-block {
-	display: inline-block;
-	margin-bottom: 1rem;
+.button {
+	background-color: none;
+	border-radius: 5px;
+	border: 1.5px solid black;
+	color: black;
+	transition: all .3s ease-in-out;
+	margin: 2px 0;
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+}
+
+.content {
+	padding: 0 1.5rem;
+}
+
+.stocks {
+	background-image: 
+		linear-gradient(rgba(255, 190, 46, 0.95), rgba(255, 190, 46, 0.95)), 
+		asset-url('stocks.jpg');
+}
+
+.friends {
+	background-image: 
+		linear-gradient(rgba(255, 190, 46, 0.95), rgba(255, 190, 46, 0.95)), 
+		asset-url('friends.jpg');
+}
+
+.stocks, .friends {
+	background-size: cover;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.icons h5{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.icons .col {
+	margin-top: 1rem;
+}
+
+.footer {
+	background-color: #fceccb;
+}
+
+.iex {
+	max-width: 150px;
+	float: right;
 }

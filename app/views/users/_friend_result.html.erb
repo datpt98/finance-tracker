@@ -1,0 +1,30 @@
+<div class="results-block">
+	<%= render 'layouts/messages' %>
+</div>
+
+<% if @friends %>
+  <h4>Search results:</h4>
+	<table class="table table-borderless table-sm table-striped">
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td><strong>Name: </strong> <%= friend.full_name %></td>
+          <td><strong>Email: </strong> <%= friend.email %></td>
+          <td>
+            <%= link_to "View Profile", user_path(friend), class: "btn btn-sm button" %>
+            <% if current_user.not_friends_with?(friend.id) %>
+              <%= link_to 'Follow Friend', friendships_path(friend: friend),
+                            class: "btn btn-sm button", method: :post %>
+            <% else %>
+              <span class="badge badge-secondary">
+                You are friends
+              </span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<hr/>

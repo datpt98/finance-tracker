@@ -1,0 +1,28 @@
+<% if @friendships.size > 0 %>
+	<table class="table table-borderless table-hover table-striped">
+	  <thead class="thead-dark">
+  		<tr>
+	      <th scope="col">Name</th>
+	      <th scope="col">Email</th>
+	      <th scope="col">Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% @friendships.each do |friend| %>
+		    <tr>
+		      <th scope="row"><%= friend.full_name %></th>
+		      <td><%= friend.email %></td>
+		      <td>
+		      	<%= link_to "View Profile", user_path(friend), class: "btn btn-sm button" %>
+		      	<%= link_to 'Unfriend', friendship_path(friend), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-sm button' %>	
+		      </td>
+		    </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+<% else %>
+
+	<div class="row col-lg-12">
+		<p class="lead">You don't have any friends yet. Please add some! </p>
+	</div>
+<% end %>

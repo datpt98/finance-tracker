@@ -1,1 +1,32 @@
-<h1>My friend</h1>
+<div class="jumbotron friends">
+	<div class="content">
+		<h1>My Friends
+			<button class="btn btn-xs button float-right" type="button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				Search Friends
+			</button>
+		</h1>
+		
+		<div class="collapse" id="collapseExample">
+		  <%= form_tag search_friends_path, remote: true, method: :get do %>
+				<div class="form-group row justify-content-center">
+					<div class="col-10">
+						<%= text_field_tag :friend, params[:friend], placeholder: "Enter name or email", autofocus: true, class: "form-control form-control-xs"%>
+					</div>
+					<div class="col-2">
+						<%= button_tag type: :submit, class: "btn btn-xs button" do %>
+							<%= fa_icon 'search' %>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+
+		<hr/>
+
+		<div id="friend-results">
+		</div>
+
+		<%= render 'friends/list' %>
+
+	</div>
+</div>

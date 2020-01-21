@@ -1,3 +1,65 @@
-<h1>Welcome to the Finance Tracker app</h1>
+<div class="jumbotron">
+	<div class="row align-items-center">
+		<div class="col-sm-5 content">
+		  <h1 class="display-4">The solution to keep track of your stocks</h1>
+		  <hr/>
+		  <p class="lead">Built and maintained with Ruby on Rails and Bootstrap</p>
+		  <%= link_to "Add stocks now", my_stocks_path, class: "btn btn-xs button" %> 
+		</div>
+		<div class="col-sm-7">
+			<%= image_tag("bg.jpg", alt: "background", class: "img-fluid") %>
+		</div>
+	</div>
+</div>
 
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<div class="text-center icons jumbotron">
+	<div class="content">
+		<h5>Get access to multiple stocks now</h5>
+		
+		<div class="row h4">
+			<div class="col">
+		  	<%= fa_stacked_icon 'google inverse', base: "circle",  text: 'Google'%>
+			</div>
+
+			<div class="col">
+		  	<%= fa_stacked_icon 'facebook inverse', base: "circle", text: 'Facebook'%>
+			</div>
+			<div class="col">
+		  	<%= fa_stacked_icon 'twitter inverse', base: "circle", text: 'Twitter'%>
+			</div>
+			<div class="col">
+		  	<%= fa_stacked_icon 'amazon inverse', base: "circle", text: 'Amazon'%>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="jumbotron">
+	<div class="content">
+		<h2 class="text-center">The financial data platform for developers</h2>
+		<hr/>
+		<div class="row">
+			<div class="col-sm">
+				<%= image_tag("1.jpg", alt: "1", class: "img-fluid") %>
+				<h5><strong>Customize stocks data</strong></h5>
+				<p>
+					Institutional grade data, including fundamentals, ownership, international equities, mutual funds, options, real-time data, and alternative data.
+				</p>
+			</div>
+			<div class="col-sm">
+				<%= image_tag("2.jpg", alt: "2", class: "img-fluid") %>
+				<h5><strong>Get started quickly</strong></h5>
+				<p>
+					FinanceTracker allows you to get access to data quickly with just one click.
+				</p>
+			</div>
+			<div class="col-sm">
+				<%= image_tag("3.jpg", alt: "3", class: "img-fluid") %>
+				<h5><strong>Widen your network</strong></h5>
+				<p>
+					User can connect other people in the same network and viewing their stocks. Features like follow or unfriend are made simple for the best user experiences.
+				</p>
+			</div>		
+		</div>
+	</div>
+</div>

@@ -1,7 +1,8 @@
-<h1><%= t('.sign_in') %></h1>
+<div class="jumbotron stocks">
+  <div class="content">
 
-<div class="row">
-  <div class="col-9">
+    <h1><%= t('.sign_in') %></h1>
+    <hr/>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.label :email %>
@@ -23,7 +24,7 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.submit  t('.sign_in'), class: 'btn btn-primary' %>
+        <%= f.submit  t('.sign_in'), class: 'btn btn-xs button' %>
       </div>
     <% end %>
   </div>
