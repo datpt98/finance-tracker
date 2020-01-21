@@ -1,5 +1,5 @@
 # README
-URL: http://alpha-blog12.herokuapp.com/
+URL: http://finance-tracker12.herokuapp.com/
 
 
 A Finance Tracker application that is built on Ruby on Rails, Devise and Bootstrap. Features include:
